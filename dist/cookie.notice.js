@@ -136,14 +136,13 @@
         noticeStyle.bottom = 0;
         noticeStyle.left = 0;
         noticeStyle.right = 0;
-        noticeStyle.width = '100%';
         noticeStyle.background = bgColor;
         noticeStyle.color = textColor;
         noticeStyle["z-index"] = '999';
-        noticeStyle.padding = '10px 0';
+        noticeStyle.padding = '10px 5px';
         noticeStyle["text-align"] = 'center';
         noticeStyle["font-size"] = "12px";
-        noticeStyle["line-height"] = "12px";
+        noticeStyle["line-height"] = "28px";
         noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
 
         return notice;
@@ -170,7 +169,7 @@
         dismissButtonStyle.color = buttonTextColor;
         dismissButtonStyle['text-decoration'] = 'none';
         dismissButtonStyle.display = 'inline-block';
-        dismissButtonStyle.padding = '10px 15px';
+        dismissButtonStyle.padding = '0 15px';
         dismissButtonStyle.margin = '0 0 0 10px';
 
         return dismissButton;
