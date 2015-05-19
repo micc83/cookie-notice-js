@@ -1,6 +1,6 @@
 # CookieNoticeJS
 
-CookieNoticeJS is a very simple and small *(→ 1.39 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
+**CookieNoticeJS** is a very simple and small *(→ 1.39 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
 Simply add the following tag to your website footer:
 
 ```html
@@ -11,7 +11,7 @@ And you will get a dismissable banner on the bottom of your pages showing a defa
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
     
-Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
+Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
 ## Customize CookieNoticeJS
 
