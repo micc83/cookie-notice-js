@@ -132,7 +132,7 @@
         notice.innerHTML = message;
         notice.setAttribute('id', 'cookieNotice');
 
-        noticeStyle.position = 'absolute';
+        noticeStyle.position = 'fixed';
         noticeStyle.bottom = 0;
         noticeStyle.left = 0;
         noticeStyle.right = 0;
