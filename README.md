@@ -13,6 +13,8 @@ And you will get a dismissable banner on the bottom of your pages showing a defa
     
 Depending on the visitor browser language one of the preloaded translation will be shown. At the moment CookieNoticeJS supports EN, IT, DE and FR. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
+## Customize CookieNoticeJS
+
 For the most of you this should be enough but CookieNoticeJS comes with many customization options. Let's see an example:
 
 ```html
@@ -22,15 +24,15 @@ For the most of you this should be enough but CookieNoticeJS comes with many cus
     
        // Localizations of the notice message
        'messageLocales': {
-           'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
+         'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
        },
       
        // Localizations of the dismiss button text
        'buttonLocales': {
-           'it': 'Chiudi'
+         'it': 'Chiudi'
        },
        
-       // Days
+       // The message will be shown again in X days
        'expiresIn': 30, 
        
        // Dismiss button background color
