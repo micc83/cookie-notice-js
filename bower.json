@@ -1,0 +1,26 @@
+{
+  "name": "cookie-notice-js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/micc83/cookie-notice-js",
+  "main": "dist/cookie.notice.min.js",
+  "authors": [
+    "Alessandro Benoit <micc83@gmail.com>"
+  ],
+  "description": "A very simple script to easily add the European Cookie Law disclaimer to any website.",
+  "keywords": [
+    "notice",
+    "cookie",
+    "law",
+    "european"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".editorconfig",
+    "index.html",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ]
+}
