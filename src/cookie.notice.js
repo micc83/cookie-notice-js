@@ -96,7 +96,7 @@
      * @returns {*}
      */
     function getStringForCurrentLocale(locales) {
-        var locale = navigator.language.substr(0, 2);
+        var locale = (navigator.userLanguage || navigator.language).substr(0, 2);
         return (locales[locale]) ? locales[locale] : locales['en'];
     }
 
