@@ -13,6 +13,8 @@ And you will get a dismissable banner on the bottom of your pages showing a defa
     
 Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
+**CookieNoticeJS** has been succesfully tested on IE9+, Chrome, Firefox and Safari.
+
 ## Customize CookieNoticeJS
 
 For the most of you including the script should be enough but **CookieNoticeJS** comes with many customization options. Let's see an example:
