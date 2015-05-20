@@ -33,7 +33,8 @@ module.exports = function (grunt) {
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-                report: 'gzip'
+                report: 'gzip',
+                screwIE8: true
             },
             build: {
                 src: 'dist/cookie.notice.js',
