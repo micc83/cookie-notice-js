@@ -22,7 +22,7 @@ For the most of you including the script should be enough but **CookieNoticeJS**
 ```html
 <script src="js/cookie.notice.min.js"></script>
 <script>
-    new CookieNoticeJS({
+    new cookieNoticeJS({
     
        // Localizations of the notice message
        'messageLocales': {
