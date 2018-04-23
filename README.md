@@ -71,4 +71,4 @@ For the most of you including the script should be enough but **CookieNoticeJS**
 ```
 
 #### Contributors
-[Bernhard Behrendt](mailto://bernahrdbernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
+[Bernhard Behrendt](mailto:bernahrdbernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
