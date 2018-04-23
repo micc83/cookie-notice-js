@@ -1,6 +1,6 @@
 # CookieNoticeJS
 
-**CookieNoticeJS** is a very simple and small *(→ 1.39 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
+**CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
 Simply add the following tag to your website footer:
 
 ```html
@@ -34,6 +34,20 @@ For the most of you including the script should be enough but **CookieNoticeJS**
          'it': 'Chiudi'
        },
        
+       // Position for the cookie-notifier (default=bottom)
+       'cookieNoticePosition':'top'
+       
+       // Shows the "learn more button (default=false)
+       'learnMoreLinkEnabled':false
+       
+       // The href of the learn more link must be applied if (learnMoreLinkEnabled=true) 
+       'learnMoreLinkHref':'/learn/more/index.html'
+       
+       // Text for optional learn more button
+       'learnMoreLinkText':{
+           'en':'learn more'
+       },
+       
        // The message will be shown again in X days
        'expiresIn': 30, 
        
@@ -48,7 +62,13 @@ For the most of you including the script should be enough but **CookieNoticeJS**
           
        // Notice text color
        'noticeTextColor': '#fff' 
+       
+       // the lernMoreLink color (default='#009fdd') 
+       'linkColor':'#f00'
           
     });
 </script>
 ```
+
+#### Contributors
+[Bernhard Behrendt](mailto:bernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
