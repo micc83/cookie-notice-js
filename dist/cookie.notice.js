@@ -20,17 +20,33 @@
         'messageLocales': {
             'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
             'en': 'We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.',
-            'de': 'Wir verwenden Cookies, um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben können. Indem Sie unsere Dienste stimmen Sie der Verwendung in Übereinstimmung mit unseren Cookies Richtlinien.',
+            'de': 'Wir verwenden Cookies um sicherzustellen dass Sie das beste Erlebnis auf unserer Website haben.',
             'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.'
         },
+
+        'cookieNoticePosition': 'bottom',
+
+        'learnMoreLinkEnabled': false,
+
+        'learnMoreLinkHref': '/cookie-banner-information.html',
+
+        'learnMoreLinkText': {
+            'it': 'Saperne di più',
+            'en': 'Learn more',
+            'de': 'Mehr erfahren',
+            'fr': 'En savoir plus'
+        },
+
         'buttonLocales': {
             'en': 'Ok'
         },
+
         'expiresIn': 30,
         'buttonBgColor': '#d35400',
         'buttonTextColor': '#fff',
         'noticeBgColor': '#000',
-        'noticeTextColor': '#fff'
+        'noticeTextColor': '#fff',
+        'linkColor': '#009fdd'
     };
 
     /**
@@ -69,7 +85,15 @@
         var noticeText = getStringForCurrentLocale(params.messageLocales);
 
         // Create notice
-        var notice = createNotice(noticeText, params.noticeBgColor, params.noticeTextColor);
+        var notice = createNotice(noticeText, params.noticeBgColor, params.noticeTextColor, params.cookieNoticePosition);
+
+        var learnMoreLink;
+
+        if (params.learnMoreLinkEnabled) {
+            var learnMoreLinkText = getStringForCurrentLocale(params.learnMoreLinkText);
+
+            learnMoreLink = createLearnMoreLink(learnMoreLinkText, params.learnMoreLinkHref, params.linkColor);
+        }
 
         // Get current locale for button text
         var buttonText = getStringForCurrentLocale(params.buttonLocales);
@@ -85,7 +109,13 @@
         });
 
         // Append notice to the DOM
-        document.body.appendChild(notice).appendChild(dismissButton);
+        var noticeDomElement = document.body.appendChild(notice);
+
+        if (!!learnMoreLink) {
+            noticeDomElement.appendChild(learnMoreLink);
+        }
+
+        noticeDomElement.appendChild(dismissButton);
 
     };
 
@@ -122,20 +152,27 @@
      * @param message
      * @param bgColor
      * @param textColor
+     * @param position
      * @returns {HTMLElement}
      */
-    function createNotice(message, bgColor, textColor) {
+    function createNotice(message, bgColor, textColor, position) {
 
         var notice = document.createElement('div'),
             noticeStyle = notice.style;
 
-        notice.innerHTML = message;
+        notice.innerHTML = message + '&nbsp;';
         notice.setAttribute('id', 'cookieNotice');
 
         noticeStyle.position = 'fixed';
-        noticeStyle.bottom = 0;
-        noticeStyle.left = 0;
-        noticeStyle.right = 0;
+
+        if (position === 'top') {
+            noticeStyle.top = '0';
+        } else {
+            noticeStyle.bottom = '0';
+        }
+
+        noticeStyle.left = '0';
+        noticeStyle.right = '0';
         noticeStyle.background = bgColor;
         noticeStyle.color = textColor;
         noticeStyle["z-index"] = '999';
@@ -164,6 +201,8 @@
         dismissButton.href = '#';
         dismissButton.innerHTML = message;
 
+        dismissButton.className = 'confirm';
+
         // Dismiss button style
         dismissButtonStyle.background = buttonColor;
         dismissButtonStyle.color = buttonTextColor;
@@ -173,6 +212,33 @@
         dismissButtonStyle.margin = '0 0 0 10px';
 
         return dismissButton;
+
+    }
+
+    /**
+     * Create dismiss button
+     * @param learnMoreLinkText
+     * @param learnMoreLinkHref
+     * @param linkColor
+     * @returns {HTMLElement}
+     */
+    function createLearnMoreLink(learnMoreLinkText, learnMoreLinkHref, linkColor) {
+
+        var learnMoreLink = document.createElement('a'),
+            learnMoreLinkStyle = learnMoreLink.style;
+
+        // Dismiss button
+        learnMoreLink.href = learnMoreLinkHref;
+        learnMoreLink.textContent = learnMoreLinkText;
+        learnMoreLink.target = '_blank';
+        learnMoreLink.className = 'learn-more';
+
+        // Dismiss button style
+        learnMoreLinkStyle.color = linkColor;
+        learnMoreLinkStyle['text-decoration'] = 'none';
+        learnMoreLinkStyle.display = 'inline';
+
+        return learnMoreLink;
 
     }
 
