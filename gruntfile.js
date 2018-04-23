@@ -21,10 +21,7 @@ module.exports = function (grunt) {
             }
         },
         strip_code: {
-            options: {
-                start_comment: "test-code",
-                end_comment: "end-test-code"
-            },
+
             src: {
                 src: 'src/cookie.notice.js',
                 dest: 'dist/cookie.notice.js'
