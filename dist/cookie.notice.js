@@ -2,7 +2,6 @@
  * Cookie Notice JS
  * @author Alessandro Benoit
  */
-;
 (function () {
 
     "use strict";
@@ -10,7 +9,8 @@
     /**
      * Store current instance
      */
-    var instance;
+    var instance,
+        originPaddingTop;
 
     /**
      * Defaults values
@@ -158,7 +158,11 @@
     function createNotice(message, bgColor, textColor, position) {
 
         var notice = document.createElement('div'),
-            noticeStyle = notice.style;
+            noticeStyle = notice.style,
+            lineHeight = 28,
+            paddingBottomTop = 10,
+            fontSize = lineHeight / 2.333,
+            noticeHeight = lineHeight + paddingBottomTop * 2;
 
         notice.innerHTML = message + '&nbsp;';
         notice.setAttribute('id', 'cookieNotice');
@@ -166,21 +170,28 @@
         noticeStyle.position = 'fixed';
 
         if (position === 'top') {
+            var bodyDOMElement = document.querySelector('body');
+
+            originPaddingTop = bodyDOMElement.style.paddingTop;
+
             noticeStyle.top = '0';
+            bodyDOMElement.style.paddingTop = noticeHeight + 'px';
         } else {
             noticeStyle.bottom = '0';
         }
+
 
         noticeStyle.left = '0';
         noticeStyle.right = '0';
         noticeStyle.background = bgColor;
         noticeStyle.color = textColor;
         noticeStyle["z-index"] = '999';
-        noticeStyle.padding = '10px 5px';
+        noticeStyle.padding = paddingBottomTop + 'px 5px';
         noticeStyle["text-align"] = 'center';
-        noticeStyle["font-size"] = "12px";
-        noticeStyle["line-height"] = "28px";
+        noticeStyle["font-size"] = fontSize + "px";
+        noticeStyle["line-height"] = lineHeight + "px";
         noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
+
 
         return notice;
     }
@@ -261,7 +272,17 @@
     function fadeElementOut(element) {
         element.style.opacity = 1;
         (function fade() {
-            (element.style.opacity -= .1) < 0.01 ? document.body.removeChild(element) : setTimeout(fade, 40)
+            if ((element.style.opacity -= .1) < 0.01) {
+
+                if (originPaddingTop !== undefined) {
+                    var bodyDOMElement = document.querySelector('body');
+                    bodyDOMElement.style.paddingTop = originPaddingTop;
+                }
+
+                document.body.removeChild(element);
+            } else {
+                setTimeout(fade, 40);
+            }
         })();
     }
 
