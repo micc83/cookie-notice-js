@@ -5,19 +5,21 @@ notification purposes that provides an easy way to show a cookie notice on your 
 
 <img src="https://i.imgur.com/koDf1h0.png" alt="FetchBot" align="center"/>
 
+**Available via npm**
 
 ```shell
 npm install cookie-notice
 ```
 
+
 **To use in your project There are plenty ways for integration:**
 
-**When installed via npm, include by using path below:**
+**When installed via npm, include in any project by using path below:**
 ```html
 <script src="node-modules/cookie-notice/dist/cookie.notice.min.js"></script>
 ```
 
-**When integrated into an Angular2+ app and installed via npm, add line below in scripts section in angular-cli.json:**
+**For usage undeled with Angular2+ add line below in "scripts" section in angular-cli.json:**
 ```json
 {
     "scripts": [
@@ -27,9 +29,9 @@ npm install cookie-notice
 }
 ```
 
-**When cloned from gitHub include by using path below:**
+**When cloned directly from gitHub use path below:**
 ```html
-<script src="dist/cookie.notice.min.js"></script>
+<script src="cookie-notice/dist/cookie.notice.min.js"></script>
 ```
 
 ## Behavior
