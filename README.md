@@ -1,13 +1,37 @@
-# CookieNoticeJS
+# CookieNotice 
 
-**CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
-Simply add the following tag to your website footer:
+**CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script with multi language support for GDPR/DSGVO‎ transparency and 
+notification purposes that provides an easy way to show a cookie notice on your website.
 
-```html
-<script src="js/cookie.notice.min.js"></script>
+
+```shell
+npm install cookie-notice
 ```
 
-And you will get a dismissable banner on the bottom of your pages showing a default cookie audit like the following:
+**To use in your project There are plenty ways for integration:**
+
+**When installed via npm, include by using path below:**
+```html
+<script src="node-modules/cookie-notice/dist/cookie.notice.min.js"></script>
+```
+
+**When integrated into an Angular2+ app and installed via npm, add line below in scripts section in angular-cli.json:**
+```json
+{
+    "scripts": [
+        "../node_modules/cookie-notice/dist/cookie.notice.js",
+        "../optional/path/to/custom/cookie-notice-config.js"
+    ]
+}
+```
+
+**When cloned from gitHub include by using path below:**
+```html
+<script src="dist/cookie.notice.min.js"></script>
+```
+
+## Behavior
+You will get a dismissable banner on the bottom of your pages showing a default cookie audit like the following:
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
     
@@ -69,6 +93,9 @@ For the most of you including the script should be enough but **CookieNoticeJS**
     });
 </script>
 ```
+
+#### Author
+Alessandro Benoit
 
 #### Contributors
 [Bernhard Behrendt](mailto:bernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
