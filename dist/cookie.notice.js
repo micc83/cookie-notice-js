@@ -167,6 +167,8 @@
         notice.innerHTML = message + '&nbsp;';
         notice.setAttribute('id', 'cookieNotice');
         notice.setAttribute('data-test-section', 'cookie-notice');
+        notice.setAttribute('data-test-transitioning', 'false');
+
 
         noticeStyle.position = 'fixed';
 
@@ -275,6 +277,9 @@
      */
     function fadeElementOut(element) {
         element.style.opacity = 1;
+
+        element.setAttribute('data-test-transitioning', 'true');
+
         (function fade() {
             if ((element.style.opacity -= .1) < 0.01) {
 
