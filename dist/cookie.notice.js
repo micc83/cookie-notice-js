@@ -166,6 +166,7 @@
 
         notice.innerHTML = message + '&nbsp;';
         notice.setAttribute('id', 'cookieNotice');
+        notice.setAttribute('data-test-section', 'cookie-notice');
 
         noticeStyle.position = 'fixed';
 
@@ -214,6 +215,9 @@
 
         dismissButton.className = 'confirm';
 
+        dismissButton.setAttribute('data-test-action', 'dismiss-cookie-notice');
+
+
         // Dismiss button style
         dismissButtonStyle.background = buttonColor;
         dismissButtonStyle.color = buttonTextColor;
@@ -227,7 +231,8 @@
     }
 
     /**
-     * Create dismiss button
+     * Create the learn more link
+     *
      * @param learnMoreLinkText
      * @param learnMoreLinkHref
      * @param linkColor
@@ -238,13 +243,12 @@
         var learnMoreLink = document.createElement('a'),
             learnMoreLinkStyle = learnMoreLink.style;
 
-        // Dismiss button
         learnMoreLink.href = learnMoreLinkHref;
         learnMoreLink.textContent = learnMoreLinkText;
         learnMoreLink.target = '_blank';
         learnMoreLink.className = 'learn-more';
+        learnMoreLink.setAttribute('data-test-action', 'learn-more-link');
 
-        // Dismiss button style
         learnMoreLinkStyle.color = linkColor;
         learnMoreLinkStyle['text-decoration'] = 'none';
         learnMoreLinkStyle.display = 'inline';
