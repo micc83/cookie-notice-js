@@ -74,7 +74,7 @@
         instance = this;
 
         // If cookies are not supported or notice cookie is already set
-        if (!testCookie() || getNoticeCookie()) {
+        if (getNoticeCookie()) {
             return;
         }
 
@@ -128,15 +128,6 @@
     function getStringForCurrentLocale(locales) {
         var locale = (navigator.userLanguage || navigator.language).substr(0, 2);
         return (locales[locale]) ? locales[locale] : locales['en'];
-    }
-
-    /**
-     * Test if cookies are enabled
-     * @returns {boolean}
-     */
-    function testCookie() {
-        document.cookie = 'testCookie=1';
-        return document.cookie.indexOf('testCookie') != -1;
     }
 
     /**
