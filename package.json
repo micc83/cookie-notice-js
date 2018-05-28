@@ -26,8 +26,8 @@
     "phantomjs-prebuilt": "^2.1.16"
   },
   "peerDependencies": {
-    "jquery": "^2.1.4",
-    "qunit": "^1.18.0"
+    "jquery": "^3.3.1",
+    "qunit": "^2.6.1"
   },
   "repository": {
     "type": "git",
