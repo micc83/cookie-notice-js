@@ -46,9 +46,9 @@ You will get a dismissable banner on the bottom of your pages showing a default 
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
 
-Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
+Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translations will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
-**CookieNoticeJS** has been succesfully tested on IE9+, Chrome, Firefox and Safari.
+**CookieNoticeJS** has been successfully tested on IE9+, Chrome, Firefox and Safari.
 
 ## Customize CookieNoticeJS
 
@@ -121,9 +121,10 @@ License: [MIT][]
 [MIT-0]: https://mit-license.org/#2018
 [travis-icon]: https://travis-ci.org/nfreear/cookie-notice.svg?branch=ndf/travis-ci
 [travis]: https://travis-ci.org/nfreear/cookie-notice "Build status – Travis-CI"
-[npm]: https://npmjs.com/package/cookie-notice
+[npm]: https://npmjs.com/package/cookie-notice "CookieNotice – on NPM"
 [npm-icon]: https://img.shields.io/npm/v/cookie-notice.svg
 [license-icon]: https://img.shields.io/npm/l/cookie-notice.svg
-[downl-icon]: https://img.shields.io/npm/dt/cookie-notice.svg "Count of total downloads ~NPM"
+[downl-icon]: https://img.shields.io/npm/dt/cookie-notice.svg "Count of total downloads – NPM"
+[build]: https://github.com/AOEpeople/cookie-notice/tree/master/dist
 [size-icon]: https://img.shields.io/github/size/AOEpeople/cookie-notice/dist/cookie.notice.min.js.svg
-    "Size of built Javascript, kilo-bytes (kB) ~ on GitHub"
+    "Size of built Javascript, kilo-bytes (kB) – on GitHub"
