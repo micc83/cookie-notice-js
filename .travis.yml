@@ -3,11 +3,7 @@
 
 language: node_js
 
-node_js:
-  - "6"
-  - "7"
-  - "8"
-  - "stable"
+node_js: "8"
 
 git:
   depth: 8
@@ -18,7 +14,7 @@ cache:
 
 # install: npm install
 
-script: npm test
+script: grunt
 
 after_script:
 - ls -al dist/
