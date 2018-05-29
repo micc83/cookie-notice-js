@@ -2,7 +2,8 @@
   "name": "cookie-notice",
   "version": "1.1.9",
   "description": "Show a widely configurable notice for European cookie law",
-  "main": "index.js",
+  "main": "gruntfile.js",
+  "browser": "dist/cookie-notice.js",
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
   },
@@ -17,11 +18,16 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-strip-code": "^1.0.6",
     "phantomjs-prebuilt": "^2.1.16"
+  },
+  "peerDependencies": {
+    "jquery": "^3.3.1",
+    "qunit": "^2.6.1"
   },
   "repository": {
     "type": "git",

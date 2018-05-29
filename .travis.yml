@@ -1,0 +1,23 @@
+# https://travis-ci.org/nfreear/cookie-notice
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+
+language: node_js
+
+node_js: 8
+
+git:
+  depth: 8
+
+cache:
+  directories:
+  - node_modules # NPM packages.
+
+# install: npm install
+
+# script: npm test
+
+after_script:
+- ls -al dist/
+- pgrep -lf '(live-server|phantom)'
+
+# End.
