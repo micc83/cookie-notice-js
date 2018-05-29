@@ -1,4 +1,3 @@
-
 [![Build status — Travis-CI][travis-icon]][travis]
 [![cookie-notice on Npmjs][npm-icon]][npm]
 [![License][license-icon]][mit]
@@ -119,8 +118,8 @@ License: [MIT][]
 [MIT]: https://github.com/micc83/cookie-notice-js/blob/master/LICENSE
     "License: MIT | Copyright © 2018 Alessandro Benoit (micc83)."
 [MIT-0]: https://mit-license.org/#2018
-[travis-icon]: https://travis-ci.org/nfreear/cookie-notice.svg?branch=ndf/travis-ci
-[travis]: https://travis-ci.org/nfreear/cookie-notice "Build status – Travis-CI"
+[travis-icon]: https://travis-ci.org/AOEpeople/cookie-notice.svg?branch=master
+[travis]: https://travis-ci.org/AOEpeople/cookie-notice "Build status – Travis-CI"
 [npm]: https://npmjs.com/package/cookie-notice "CookieNotice – on NPM"
 [npm-icon]: https://img.shields.io/npm/v/cookie-notice.svg
 [license-icon]: https://img.shields.io/npm/l/cookie-notice.svg
