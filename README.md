@@ -69,13 +69,13 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        },
 
        // Position for the cookie-notifier (default=bottom)
-       'cookieNoticePosition':'top'
+       'cookieNoticePosition': 'top',
 
        // Shows the "learn more button (default=false)
-       'learnMoreLinkEnabled':false
+       'learnMoreLinkEnabled': false,
 
        // The href of the learn more link must be applied if (learnMoreLinkEnabled=true)
-       'learnMoreLinkHref':'/learn/more/index.html'
+       'learnMoreLinkHref': '/learn/more/index.html',
 
        // Text for optional learn more button
        'learnMoreLinkText':{
@@ -95,13 +95,28 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        'noticeBgColor': '#000',
 
        // Notice text color
-       'noticeTextColor': '#fff'
+       'noticeTextColor': '#fff',
 
-       // the lernMoreLink color (default='#009fdd')
-       'linkColor':'#f00'
+       // the learnMoreLink color (default='#009fdd')
+       'linkColor': '#f00',
 
+       // Print debug output to the console (default=false)
+       'debug': false
     });
 </script>
+```
+
+## Configuration via `data-` attribute
+
+Configuration options can be put in a `data-cookie-notice` HTML attribute in JSON format.
+Note, you can include the Javascript from the [unpkg][] CDN ([browse][]).
+For example:
+
+```html
+<script
+  data-cookie-notice='{ "learnMoreLinkEnabled": true, "learnMoreLinkHref": "/privacy.html" }'
+  src="https://unpkg.com/cookie-notice@^1/dist/cookie.notice.min.js"
+></script>
 ```
 
 #### Author
@@ -121,9 +136,14 @@ License: [MIT][]
 [travis-icon]: https://travis-ci.org/AOEpeople/cookie-notice.svg?branch=master
 [travis]: https://travis-ci.org/AOEpeople/cookie-notice "Build status – Travis-CI"
 [npm]: https://npmjs.com/package/cookie-notice "CookieNotice – on NPM"
-[npm-icon]: https://img.shields.io/npm/v/cookie-notice.svg
+[npm-icon]: https://badge.fury.io/js/cookie-notice.svg
+[npm-i0]: https://img.shields.io/npm/v/cookie-notice.svg "(Timeout errors)"
 [license-icon]: https://img.shields.io/npm/l/cookie-notice.svg
 [downl-icon]: https://img.shields.io/npm/dt/cookie-notice.svg "Count of total downloads – NPM"
 [build]: https://github.com/AOEpeople/cookie-notice/tree/master/dist
 [size-icon]: https://img.shields.io/github/size/AOEpeople/cookie-notice/dist/cookie.notice.min.js.svg
     "Size of built Javascript, kilo-bytes (kB) – on GitHub"
+[unpkg]: http://unpkg.com/ "unpkg is a fast, global content delivery network (CDN) for everything on npm."
+[browse]: https://unpkg.com/cookie-notice@^1/ "Browse cookie-notice on unpkg"
+
+[End]: //.
