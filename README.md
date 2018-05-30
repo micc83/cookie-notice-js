@@ -124,6 +124,7 @@ Alessandro Benoit
 
 #### Contributors
 [Bernhard Behrendt](mailto:bernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
+[Nick Freear](mailto:nfreear@yahoo.co.uk) [IET at the OU](https://github.com/IET-OU)
 
 ### License
 
