@@ -46,7 +46,8 @@
         'buttonTextColor': '#fff',
         'noticeBgColor': '#000',
         'noticeTextColor': '#fff',
-        'linkColor': '#009fdd'
+        'linkColor': '#009fdd',
+        'debug': false
     };
 
     /**
@@ -78,8 +79,22 @@
             return;
         }
 
+        // 'data-' attribute - data-cookie-notice='{ "key": "value", ... }'
+        var elemCfg = document.querySelector('script[ data-cookie-notice ]');
+        var config;
+        try {
+            config = elemCfg ? JSON.parse(elemCfg.getAttribute('data-cookie-notice')) : {};
+        } catch (ex) {
+            console.error('data-cookie-notice JSON error:', elemCfg, ex);
+            config = {};
+        }
+
         // Extend default params
-        var params = extendDefaults(defaults, arguments[0] || {});
+        var params = extendDefaults(defaults, arguments[0] || config || {});
+
+        if (params.debug) {
+            console.warn('cookie-notice:', params);
+        }
 
         // Get current locale for notice text
         var noticeText = getStringForCurrentLocale(params.messageLocales);
