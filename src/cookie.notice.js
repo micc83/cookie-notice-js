@@ -19,7 +19,7 @@
     var defaults = {
         'messageLocales': {
             'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
-            'en': 'We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.',
+            'en': 'We use cookies to ensure that you have the best experience on our website. If you continue to use this site we assume that you accept this.',
             'de': 'Wir verwenden Cookies um sicherzustellen dass Sie das beste Erlebnis auf unserer Website haben.',
             'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.'
         },
@@ -38,7 +38,7 @@
         },
 
         'buttonLocales': {
-            'en': 'Ok'
+            'en': 'OK'
         },
 
         'expiresIn': 30,
