@@ -14,11 +14,11 @@ cache:
 
 # install: npm install
 
-script: grunt
+script: npm test
 
 after_script:
-- ls -al dist/
-- pgrep -lf '(live-server|phantom)'
+  - ls -al dist/
+  - pgrep -lf '(live-server|phantom)'
 
 deploy:
   provider: npm

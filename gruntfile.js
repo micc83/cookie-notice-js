@@ -24,11 +24,11 @@ module.exports = function (grunt) {
             test: {
                 options: { // Task-specific options go here.
                     // screenCapture: './_pa11y-screen-capture.png',
-                    standard: 'WCAG2AAA',
+                    standard: 'WCAG2AA', // Or 'WCAG2AAA'
                     timeout: 5000,
                     wait: 500,
-                    rootElement: '#cookieNotice',
-                    verifyPage: 'id="cookieNotice"'
+                    rootElement: 'body', // Was: '#cookieNotice',
+                    verifyPage: 'id="cookieNotice"' // Not supported?
                 },
                 url: [ 'http://localhost:8000/tests/data.html' ]
                 //, file: [ 'array of files, globbing permitted' ]
