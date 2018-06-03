@@ -42,11 +42,12 @@
         },
 
         'expiresIn': 30,
-        'buttonBgColor': '#d35400',
+        'buttonBgColor': '#983c00', // Accessibility contrast fix (Was: '#d35400').
         'buttonTextColor': '#fff',
         'noticeBgColor': '#000',
         'noticeTextColor': '#fff',
         'linkColor': '#009fdd',
+        'linkTarget': '', // Accessibility fix (Was: '_blank').
         'debug': false
     };
 
@@ -107,7 +108,7 @@
         if (params.learnMoreLinkEnabled) {
             var learnMoreLinkText = getStringForCurrentLocale(params.learnMoreLinkText);
 
-            learnMoreLink = createLearnMoreLink(learnMoreLinkText, params.learnMoreLinkHref, params.linkColor);
+            learnMoreLink = createLearnMoreLink(learnMoreLinkText, params.learnMoreLinkHref, params.linkTarget, params.linkColor);
         }
 
         // Get current locale for button text
@@ -221,6 +222,7 @@
         dismissButton.href = '#';
         dismissButton.innerHTML = message;
 
+        dismissButton.setAttribute('role', 'button'); // Accessibility fix.
         dismissButton.className = 'confirm';
 
         dismissButton.setAttribute('data-test-action', 'dismiss-cookie-notice');
@@ -246,19 +248,19 @@
      * @param linkColor
      * @returns {HTMLElement}
      */
-    function createLearnMoreLink(learnMoreLinkText, learnMoreLinkHref, linkColor) {
+    function createLearnMoreLink(learnMoreLinkText, learnMoreLinkHref, linkTarget, linkColor) {
 
         var learnMoreLink = document.createElement('a'),
             learnMoreLinkStyle = learnMoreLink.style;
 
         learnMoreLink.href = learnMoreLinkHref;
         learnMoreLink.textContent = learnMoreLinkText;
-        learnMoreLink.target = '_blank';
+        learnMoreLink.target = linkTarget;
         learnMoreLink.className = 'learn-more';
         learnMoreLink.setAttribute('data-test-action', 'learn-more-link');
 
         learnMoreLinkStyle.color = linkColor;
-        learnMoreLinkStyle['text-decoration'] = 'none';
+        learnMoreLinkStyle['text-decoration'] = 'underline'; // Accessibility fix (Was: 'none').
         learnMoreLinkStyle.display = 'inline';
 
         return learnMoreLink;
