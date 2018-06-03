@@ -6,15 +6,16 @@
 
 # CookieNotice
 
-**CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script with multi language support for GDPR/DSGVO‎ transparency and
+**CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script with multi language support for [GDPR][]/[DSGVO][]‎ transparency and
 notification purposes that provides an easy way to show a cookie notice on your website.
 
 <img src="https://i.imgur.com/koDf1h0.png" alt="FetchBot" align="center"/>
 
-**Available via npm**
+**Available via [npm][]**
 
 ```shell
 npm install cookie-notice
+npm test
 ```
 
 
@@ -100,6 +101,9 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        // the learnMoreLink color (default='#009fdd')
        'linkColor': '#f00',
 
+       // The target of the learn more link (default='', or '_blank')
+       'linkTarget': '',
+
        // Print debug output to the console (default=false)
        'debug': false
     });
@@ -144,7 +148,10 @@ License: [MIT][]
 [build]: https://github.com/AOEpeople/cookie-notice/tree/master/dist
 [size-icon]: https://img.shields.io/github/size/AOEpeople/cookie-notice/dist/cookie.notice.min.js.svg
     "Size of built Javascript, kilo-bytes (kB) – on GitHub"
-[unpkg]: http://unpkg.com/ "unpkg is a fast, global content delivery network (CDN) for everything on npm."
+[unpkg]: https://unpkg.com/ "unpkg is a fast, global content delivery network (CDN) for everything on npm."
 [browse]: https://unpkg.com/cookie-notice@^1/ "Browse cookie-notice on unpkg"
+
+[DSGVO]: https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung "Datenschutz-Grundverordnung (DSGVO)"
+[GDPR]: https://en.wikipedia.org/wiki/General_Data_Protection_Regulation "General Data Protection Regulation (GDPR)"
 
 [End]: //.
