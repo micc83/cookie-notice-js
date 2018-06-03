@@ -16,8 +16,12 @@
   ],
   "author": "Alessandro Benoit, Bernhard Behrendt",
   "contributors": [
-    { "name": "Bernhard Behrendt" },
-    { "name": "Nick Freear" }
+    {
+      "name": "Bernhard Behrendt"
+    },
+    {
+      "name": "Nick Freear"
+    }
   ],
   "license": "MIT",
   "devDependencies": {
@@ -26,13 +30,14 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-contrib-uglify": "^3.3.0",
+    "grunt-rsids-pa11y": "^0.3.4",
     "grunt-strip-code": "^1.0.6",
     "jquery": "^3.3.1",
     "phantomjs-prebuilt": "^2.1.16",
     "qunit": "^2.6.1"
   },
-  "engines" : {
-    "node" : ">=6.0"
+  "engines": {
+    "node": ">=6.0"
   },
   "files": [
     "dist/",
