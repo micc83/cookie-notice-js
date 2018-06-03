@@ -42,7 +42,7 @@
         },
 
         'expiresIn': 30,
-        'buttonBgColor': '#983c00', // Accessibility contrast fix (Was: '#d35400').
+        'buttonBgColor': '#ca5000', // Accessibility contrast fix (Was: '#d35400') (WCAG2AAA: '#983c00').
         'buttonTextColor': '#fff',
         'noticeBgColor': '#000',
         'noticeTextColor': '#fff',
@@ -166,7 +166,7 @@
 
         var notice = document.createElement('div'),
             noticeStyle = notice.style,
-            lineHeight = 28,
+            lineHeight = 2, // Was: 28 (px).
             paddingBottomTop = 10,
             fontSize = lineHeight / 2.333,
             noticeHeight = lineHeight + paddingBottomTop * 2;
@@ -198,8 +198,8 @@
         noticeStyle["z-index"] = '999';
         noticeStyle.padding = paddingBottomTop + 'px 5px';
         noticeStyle["text-align"] = 'center';
-        noticeStyle["font-size"] = fontSize + "px";
-        noticeStyle["line-height"] = lineHeight + "px";
+        noticeStyle["font-size"] = fontSize + 'rem'; // Was: 'px'.
+        noticeStyle["line-height"] = lineHeight + 'rem'; // Was: 'px'.
         noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
 
 
