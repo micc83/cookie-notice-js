@@ -6,7 +6,7 @@
   "authors": [
     "Alessandro Benoit <micc83@gmail.com>",
     "Bernhard Behrendt <bernhard.behrendt@aoe.com>",
-    "Nick Freear<nfreear@yahoo.co.uk>"
+    "Nick Freear"
   ],
   "description": "A very simple script to easily add the European Cookie Law disclaimer to any website.",
   "keywords": [
@@ -22,6 +22,7 @@
     ".gitignore",
     ".gitattributes",
     ".editorconfig",
+    ".travis.yml",
     "index.html",
     "node_modules",
     "bower_components",

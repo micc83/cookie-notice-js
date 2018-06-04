@@ -3,8 +3,9 @@
   "version": "1.1.11",
   "description": "Show a widely configurable notice for European cookie law",
   "main": "gruntfile.js",
-  "browser": "dist/cookie-notice.js",
+  "browser": "dist/cookie.notice.js",
   "scripts": {
+    "start": "live-server --port=9001",
     "test": "grunt"
   },
   "keywords": [
@@ -15,6 +16,14 @@
     "vanilla"
   ],
   "author": "Alessandro Benoit, Bernhard Behrendt",
+  "contributors": [
+    {
+      "name": "Bernhard Behrendt"
+    },
+    {
+      "name": "Nick Freear"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.2",
@@ -22,13 +31,25 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-contrib-uglify": "^3.3.0",
+    "grunt-rsids-pa11y": "^0.3.4",
     "grunt-strip-code": "^1.0.6",
     "jquery": "^3.3.1",
     "phantomjs-prebuilt": "^2.1.16",
     "qunit": "^2.6.1"
   },
+  "peerDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "bugs": "https://github.com/AOEpeople/cookie-notice/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AOEpeople/cookie-notice-js"
+    "url": "https://github.com/AOEpeople/cookie-notice"
   }
 }

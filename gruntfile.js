@@ -20,6 +20,20 @@ module.exports = function (grunt) {
                 }
             }
         },
+        rsids_pa11y: { // Accessibility testing, via ~ http://pa11y.org/
+            test: {
+                options: { // Task-specific options go here.
+                    // screenCapture: './_pa11y-screen-capture.png',
+                    standard: 'WCAG2AA', // Or 'WCAG2AAA'
+                    timeout: 5000,
+                    wait: 500,
+                    rootElement: 'body', // Was: '#cookieNotice',
+                    verifyPage: 'id="cookieNotice"' // Not supported?
+                },
+                url: [ 'http://localhost:8000/tests/data.html' ]
+                //, file: [ 'array of files, globbing permitted' ]
+            }
+        },
         strip_code: {
 
             src: {
@@ -45,9 +59,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-strip-code');
+    grunt.loadNpmTasks('grunt-rsids-pa11y');
 
     // Default task(s).
-    grunt.registerTask('default', ['connect', 'qunit', 'strip_code', 'uglify']);
-    grunt.registerTask('test', ['connect', 'qunit']);
+    grunt.registerTask('default', [ 'test', 'strip_code', 'uglify' ]);
+    grunt.registerTask('test', [ 'connect', 'qunit', 'rsids_pa11y' ]);
 
 };
