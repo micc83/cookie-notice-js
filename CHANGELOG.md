@@ -11,7 +11,7 @@ Version History
  * Add accessibility testing via [grunt-rsids-pa11y][] and [pa11y][], WCAG 2.0 AA, pull #6;
  * Accessibility fixes — colour contrast, button role, link target, link underline;
  * Accessibility fixes — express CSS font-size in `em` or `rem`, not `px`;
- * Add configuration option — `learnMoreLinkTarget` (default: '');
+ * Add configuration option — `linkTarget` (default: '');
  * Edit the language used in the English translation;
  * Fix `browser` and `repository` fields in `package.json`;
  * Add `files` and `bugs` fields to `package.json`;
@@ -30,7 +30,7 @@ Version History
 
  * _Date:  29 May 2018_;
  * Move jQuery to `devDependencies` for clarity, pull #2;
- * Point `tests/index.html` to local copies of jQuery and QUnit;
+ * Point `tests/index.html` to local copies of jQuery and QUnit (was CDN);
 
 ## Version 1.1.9
 
@@ -53,13 +53,21 @@ Version History
 ## Version 1.1.0
 
  * _Date:  24 April 2018_;
- * First release on NPMJS;
+ * First release on [npm][];
+
+## Version 1.0.0
+
+ * _Date:  20 May 2015_;
+ * Release by:  [@micc83][];
+ * (Not on [npm][])
 
 ---
 
 ← [README][]
 
 [readme]: https://github.com/AOEpeople/cookie-notice#readme
+[npm]: https://www.npmjs.com/package/cookie-notice
+[@micc83]: https://github.com/micc83/cookie-notice-js "Alessandro Benoit"
 [#4]: https://github.com/AOEpeople/cookie-notice/issues/4
 [a11y-fail]: https://travis-ci.org/nfreear/cookie-notice/jobs/387344672#L1217-L1235
 [grunt-rsids-pa11y]: https://www.npmjs.com/package/grunt-rsids-pa11y
