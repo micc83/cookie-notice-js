@@ -1,3 +1,5 @@
+**Notice:** CookieNoticeJS is not under active development for the time being (and not GDPR compliant for what I know). Check  [AOEPeople fork](https://github.com/AOEpeople/cookie-notice) instead.
+
 # CookieNoticeJS
 
 **CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script that provides an easy way to show that damn cookie notice on your website.
