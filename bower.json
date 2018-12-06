@@ -1,12 +1,13 @@
 {
   "name": "cookie-notice-js",
-  "version": "1.1.11",
+  "version": "1.1.15",
   "homepage": "https://github.com/micc83/cookie-notice-js",
   "main": "dist/cookie.notice.min.js",
   "authors": [
     "Alessandro Benoit <micc83@gmail.com>",
     "Bernhard Behrendt <bernhard.behrendt@aoe.com>",
-    "Nick Freear"
+    "Nick Freear",
+    "Matthias Schröder"
   ],
   "description": "A very simple script to easily add the European Cookie Law disclaimer to any website.",
   "keywords": [

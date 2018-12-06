@@ -5,6 +5,12 @@
 
 Version History
 
+## Version 1.1.14/15
+ * _Date:  6 December 2018_;
+ * Typo in German translation -> contrib. by @chroedermatthias (Matthias Schröder)
+ * Dependency upgrade
+ * Fixed unit tests
+
 ## Version 1.1.12
 
  * _Date:  approx. 4-6 June 2018_;
