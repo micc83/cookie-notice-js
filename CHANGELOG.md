@@ -5,7 +5,11 @@
 
 Version History
 
-## Version 1.1.14/15
+## Version 1.1.16
+ * _Date:  12 December 2018_;
+ * Initial font size too small
+ 
+ ## Version 1.1.14/15
  * _Date:  6 December 2018_;
  * Typo in German translation -> contrib. by @chroedermatthias (Matthias Schröder)
  * Dependency upgrade

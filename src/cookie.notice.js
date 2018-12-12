@@ -168,7 +168,7 @@
             noticeStyle = notice.style,
             lineHeight = 2, // Was: 28 (px).
             paddingBottomTop = 10,
-            fontSize = lineHeight / 2.333,
+            fontSize = lineHeight / 1.4,
             noticeHeight = lineHeight + paddingBottomTop * 2;
 
         notice.innerHTML = message + '&nbsp;';
