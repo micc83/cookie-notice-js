@@ -26,7 +26,7 @@ npm test
 <script src="node-modules/cookie-notice/dist/cookie.notice.min.js"></script>
 ```
 
-**For usage undeled with Angular2+ add line below in "scripts" section in angular-cli.json:**
+**For usage with Angular2+ add line below in "scripts" section in angular-cli.json:**
 ```json
 {
     "scripts": [
