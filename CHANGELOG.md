@@ -5,6 +5,10 @@
 
 Version History
 
+## Version 1.1.17
+ * _Date:  15 December 2018_;
+ * Accessibility (a11y) improvements - fixed all WCAG2AA errors and warnings 
+ 
 ## Version 1.1.16
  * _Date:  12 December 2018_;
  * Initial font size too small

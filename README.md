@@ -9,7 +9,7 @@
 **CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script with multi language support for [GDPR][]/[DSGVO][]‎ transparency and
 notification purposes that provides an easy way to show a cookie notice on your website.
 
-<img src="https://i.imgur.com/koDf1h0.png" alt="FetchBot" align="center"/>
+<img src="https://i.imgur.com/koDf1h0.png" alt="cookie notice working example" align="center"/>
 
 **Available via [npm][]**
 

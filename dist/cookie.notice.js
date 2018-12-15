@@ -17,38 +17,39 @@
      * @type object
      */
     var defaults = {
-        'messageLocales': {
-            'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
-            'en': 'We use cookies to ensure that you have the best experience on our website. If you continue to use this site we assume that you accept this.',
-            'de': 'Wir verwenden Cookies um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben.',
-            'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.'
+        messageLocales: {
+            it: 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
+            en: 'We use cookies to ensure that you have the best experience on our website. If you continue to use this site we assume that you accept this.',
+            de: 'Wir verwenden Cookies um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben.',
+            fr: 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.'
         },
 
-        'cookieNoticePosition': 'bottom',
+        cookieNoticePosition: 'bottom',
 
-        'learnMoreLinkEnabled': false,
+        learnMoreLinkEnabled: false,
 
-        'learnMoreLinkHref': '/cookie-banner-information.html',
+        learnMoreLinkHref: '/cookie-banner-information.html',
 
-        'learnMoreLinkText': {
-            'it': 'Saperne di più',
-            'en': 'Learn more',
-            'de': 'Mehr erfahren',
-            'fr': 'En savoir plus'
+        learnMoreLinkText: {
+            it: 'Saperne di più',
+            en: 'Learn more',
+            de: 'Mehr erfahren',
+            fr: 'En savoir plus'
         },
 
-        'buttonLocales': {
-            'en': 'OK'
+        buttonLocales: {
+            en: 'OK'
         },
 
-        'expiresIn': 30,
-        'buttonBgColor': '#ca5000', // Accessibility contrast fix (Was: '#d35400') (WCAG2AAA: '#983c00').
-        'buttonTextColor': '#fff',
-        'noticeBgColor': '#000',
-        'noticeTextColor': '#fff',
-        'linkColor': '#009fdd',
-        'linkTarget': '', // Accessibility fix (Was: '_blank').
-        'debug': false
+        expiresIn: 30,
+        buttonBgColor: '#ca5000',
+        buttonTextColor: '#fff',
+        noticeBgColor: '#000',
+        noticeTextColor: '#fff',
+        linkColor: '#009fdd',
+        linkBgColor: '#000',
+        linkTarget: '_blank',
+        debug: false
     };
 
     /**
@@ -83,8 +84,10 @@
         // 'data-' attribute - data-cookie-notice='{ "key": "value", ... }'
         var elemCfg = document.querySelector('script[ data-cookie-notice ]');
         var config;
+
         try {
             config = elemCfg ? JSON.parse(elemCfg.getAttribute('data-cookie-notice')) : {};
+            // TODO apply settings coming from data attribute and keep defaults if not overwritten -> 1.2.x
         } catch (ex) {
             console.error('data-cookie-notice JSON error:', elemCfg, ex);
             config = {};
@@ -108,7 +111,7 @@
         if (params.learnMoreLinkEnabled) {
             var learnMoreLinkText = getStringForCurrentLocale(params.learnMoreLinkText);
 
-            learnMoreLink = createLearnMoreLink(learnMoreLinkText, params.learnMoreLinkHref, params.linkTarget, params.linkColor);
+            learnMoreLink = createLearnMoreLink(learnMoreLinkText, params.learnMoreLinkHref, params.linkTarget, params.linkColor, params.linkBgColor);
         }
 
         // Get current locale for button text
@@ -166,7 +169,7 @@
 
         var notice = document.createElement('div'),
             noticeStyle = notice.style,
-            lineHeight = 2, // Was: 28 (px).
+            lineHeight = 2,
             paddingBottomTop = 10,
             fontSize = lineHeight / 1.4,
             noticeHeight = lineHeight + paddingBottomTop * 2;
@@ -198,8 +201,8 @@
         noticeStyle["z-index"] = '999';
         noticeStyle.padding = paddingBottomTop + 'px 5px';
         noticeStyle["text-align"] = 'center';
-        noticeStyle["font-size"] = fontSize + 'rem'; // Was: 'px'.
-        noticeStyle["line-height"] = lineHeight + 'rem'; // Was: 'px'.
+        noticeStyle["font-size"] = fontSize + 'rem';
+        noticeStyle["line-height"] = lineHeight + 'rem';
         noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
 
 
@@ -215,14 +218,14 @@
      */
     function createDismissButton(message, buttonColor, buttonTextColor) {
 
-        var dismissButton = document.createElement('a'),
+        var dismissButton = document.createElement('span'),
             dismissButtonStyle = dismissButton.style;
 
         // Dismiss button
         dismissButton.href = '#';
         dismissButton.innerHTML = message;
 
-        dismissButton.setAttribute('role', 'button'); // Accessibility fix.
+        dismissButton.setAttribute('role', 'button');
         dismissButton.className = 'confirm';
 
         dismissButton.setAttribute('data-test-action', 'dismiss-cookie-notice');
@@ -232,6 +235,7 @@
         dismissButtonStyle.background = buttonColor;
         dismissButtonStyle.color = buttonTextColor;
         dismissButtonStyle['text-decoration'] = 'none';
+        dismissButtonStyle['cursor'] = 'pointer';
         dismissButtonStyle.display = 'inline-block';
         dismissButtonStyle.padding = '0 15px';
         dismissButtonStyle.margin = '0 0 0 10px';
@@ -248,19 +252,21 @@
      * @param linkColor
      * @returns {HTMLElement}
      */
-    function createLearnMoreLink(learnMoreLinkText, learnMoreLinkHref, linkTarget, linkColor) {
+    function createLearnMoreLink(learnMoreLinkText, learnMoreLinkHref, linkTarget, linkColor, linkBgColor) {
 
         var learnMoreLink = document.createElement('a'),
             learnMoreLinkStyle = learnMoreLink.style;
 
         learnMoreLink.href = learnMoreLinkHref;
         learnMoreLink.textContent = learnMoreLinkText;
+        learnMoreLink.title = learnMoreLinkText;
         learnMoreLink.target = linkTarget;
         learnMoreLink.className = 'learn-more';
         learnMoreLink.setAttribute('data-test-action', 'learn-more-link');
 
         learnMoreLinkStyle.color = linkColor;
-        learnMoreLinkStyle['text-decoration'] = 'underline'; // Accessibility fix (Was: 'none').
+        learnMoreLinkStyle.backgroundColor = linkBgColor;
+        learnMoreLinkStyle['text-decoration'] = 'underline';
         learnMoreLinkStyle.display = 'inline';
 
         return learnMoreLink;

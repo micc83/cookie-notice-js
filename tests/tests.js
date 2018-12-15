@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     QUnit.test('Check if the notice is present', function (assert) {
         assert.strictEqual($('#cookieNotice').length, 1, 'Notice is present');
-        assert.strictEqual($('#cookieNotice').find('a.confirm').length, 1, 'Notice button is present');
+        assert.strictEqual($('#cookieNotice').find('span.confirm').length, 1, 'Notice button is present');
     });
 
     QUnit.test('Check that notice disappear when clicking on the Ok button', function (assert) {
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
         var done = assert.async();
 
-        $('#cookieNotice').find('a.confirm')[0].click();
+        $('#cookieNotice').find('span.confirm')[0].click();
 
         window.setTimeout(function () {
             assert.strictEqual($('#cookieNotice').length, 0, 'Notice is gone');
