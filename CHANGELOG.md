@@ -5,7 +5,11 @@
 
 Version History
 
-## Version 1.1.17
+## Version 1.1.18
+ * _Date:  01 January 2019_;
+ * Step back to px based font sizes due to negative side effects
+ 
+ ## Version 1.1.17
  * _Date:  15 December 2018_;
  * Accessibility (a11y) improvements - fixed all WCAG2AA errors and warnings 
  

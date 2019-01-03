@@ -169,9 +169,9 @@
 
         var notice = document.createElement('div'),
             noticeStyle = notice.style,
-            lineHeight = 2,
+            lineHeight = 28,
             paddingBottomTop = 10,
-            fontSize = lineHeight / 1.4,
+            fontSize = 12,
             noticeHeight = lineHeight + paddingBottomTop * 2;
 
         notice.innerHTML = message + '&nbsp;';
@@ -201,8 +201,8 @@
         noticeStyle["z-index"] = '999';
         noticeStyle.padding = paddingBottomTop + 'px 5px';
         noticeStyle["text-align"] = 'center';
-        noticeStyle["font-size"] = fontSize + 'rem';
-        noticeStyle["line-height"] = lineHeight + 'rem';
+        noticeStyle["font-size"] = fontSize + 'px';
+        noticeStyle["line-height"] = lineHeight + 'px';
         noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
 
 
@@ -265,7 +265,7 @@
         learnMoreLink.setAttribute('data-test-action', 'learn-more-link');
 
         learnMoreLinkStyle.color = linkColor;
-        learnMoreLinkStyle.backgroundColor = linkBgColor;
+        learnMoreLinkStyle.backgroundColor = 'transparent';
         learnMoreLinkStyle['text-decoration'] = 'underline';
         learnMoreLinkStyle.display = 'inline';
 
