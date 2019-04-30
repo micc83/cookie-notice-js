@@ -37,13 +37,13 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        },
        
        // Position for the cookie-notifier (default=bottom)
-       'cookieNoticePosition':'top'
+       'cookieNoticePosition':'top',
        
        // Shows the "learn more button (default=false)
-       'learnMoreLinkEnabled':false
+       'learnMoreLinkEnabled':false,
        
        // The href of the learn more link must be applied if (learnMoreLinkEnabled=true) 
-       'learnMoreLinkHref':'/learn/more/index.html'
+       'learnMoreLinkHref':'/learn/more/index.html',
        
        // Text for optional learn more button
        'learnMoreLinkText':{
@@ -63,7 +63,7 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        'noticeBgColor': '#000', 
           
        // Notice text color
-       'noticeTextColor': '#fff' 
+       'noticeTextColor': '#fff', 
        
        // the lernMoreLink color (default='#009fdd') 
        'linkColor':'#f00'
