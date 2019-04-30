@@ -126,7 +126,12 @@
      * @returns {*}
      */
     function getStringForCurrentLocale(locales) {
-        var locale = (navigator.userLanguage || navigator.language).substr(0, 2);
+        var locale = (
+            document.documentElement.lang ||
+            navigator.language||
+            navigator.userLanguage
+        ).substr(0, 2);
+
         return (locales[locale]) ? locales[locale] : locales['en'];
     }
 

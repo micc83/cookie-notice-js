@@ -126,7 +126,12 @@
      * @returns {*}
      */
     function getStringForCurrentLocale(locales) {
-        var locale = (navigator.userLanguage || navigator.language).substr(0, 2);
+        var locale = (
+            document.documentElement.lang ||
+            navigator.userLanguage ||
+            navigator.language
+        ).substr(0, 2);
+
         return (locales[locale]) ? locales[locale] : locales['en'];
     }
 
@@ -261,7 +266,7 @@
     function fadeElementOut(element) {
         element.style.opacity = 1;
         (function fade() {
-            (element.style.opacity -= .1) < 0.01 ? document.body.removeChild(element) : setTimeout(fade, 40)
+            (element.style.opacity -= .1) < 0.01 ? element.parentNode.removeChild(element) : setTimeout(fade, 40)
         })();
     }
 
