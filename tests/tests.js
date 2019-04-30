@@ -104,7 +104,6 @@ $(document).ready(function () {
         cookieNoticeJS.clearInstance();
         new cookieNoticeJS();
         assert.strictEqual($('#cookieNotice').css('bottom'), '0px', 'positioning is sticked to bottom');
-        assert.strictEqual($('#cookieNotice').css('top'), 'auto', 'so top position is auto');
     });
 
 
