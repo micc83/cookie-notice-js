@@ -261,7 +261,7 @@
     function fadeElementOut(element) {
         element.style.opacity = 1;
         (function fade() {
-            (element.style.opacity -= .1) < 0.01 ? document.body.removeChild(element) : setTimeout(fade, 40)
+            (element.style.opacity -= .1) < 0.01 ? element.parentNode.removeChild(element) : setTimeout(fade, 40)
         })();
     }
 
