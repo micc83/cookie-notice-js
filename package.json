@@ -1,58 +1,56 @@
 {
-  "name": "cookie-notice",
-  "version": "1.1.18",
-  "description": "Show a widely configurable notice for European cookie law",
-  "main": "gruntfile.js",
-  "browser": "dist/cookie.notice.js",
-  "scripts": {
-    "start": "live-server --port=9001",
-    "test": "grunt"
-  },
-  "keywords": [
-    "GDPR",
-    "DSGVO‎",
-    "cookie",
-    "notice",
-    "vanilla"
-  ],
-  "author": "Alessandro Benoit, Bernhard Behrendt",
-  "contributors": [
-    {
-      "name": "Bernhard Behrendt"
+    "name": "cookie-notice",
+    "version": "1.2.1",
+    "description": "Show a widely configurable notice for European cookie law",
+    "main": "gruntfile.js",
+    "browser": "dist/cookie.notice.js",
+    "scripts": {
+        "start": "./node_modules/.bin/live-server --port=9001",
+        "test": "grunt"
     },
-    {
-      "name": "Nick Freear"
+    "keywords": [
+        "GDPR",
+        "DSGVO‎",
+        "cookie",
+        "notice",
+        "vanilla"
+    ],
+    "author": "Alessandro Benoit, Bernhard Behrendt",
+    "contributors": [
+        {
+            "name": "Bernhard Behrendt"
+        },
+        {
+            "name": "Nick Freear"
+        },
+        {
+            "name": "Matthias Schröder"
+        }
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "grunt": "^1.0.3",
+        "grunt-cli": "^1.3.2",
+        "grunt-contrib-connect": "^2.0.0",
+        "grunt-contrib-qunit": "^3.0.1",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-rsids-pa11y": "^0.3.4",
+        "grunt-strip-code": "^1.0.6",
+        "jquery": "^3.3.1",
+        "phantomjs-prebuilt": "^2.1.16",
+        "qunit": "^2.8.0",
+        "live-server": "^1.2.0"
     },
-    {
-      "name": "Matthias Schröder"
+    "engines": {
+        "node": ">=6.0"
+    },
+    "files": [
+        "dist/",
+        "src/"
+    ],
+    "bugs": "https://github.com/AOEpeople/cookie-notice/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AOEpeople/cookie-notice"
     }
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-cli": "^1.3.2",
-    "grunt-contrib-connect": "^2.0.0",
-    "grunt-contrib-qunit": "^3.0.1",
-    "grunt-contrib-uglify": "^4.0.0",
-    "grunt-rsids-pa11y": "^0.3.4",
-    "grunt-strip-code": "^1.0.6",
-    "jquery": "^3.3.1",
-    "phantomjs-prebuilt": "^2.1.16",
-    "qunit": "^2.8.0"
-  },
-  "peerDependencies": {
-    "live-server": "^1.2.0"
-  },
-  "engines": {
-    "node": ">=6.0"
-  },
-  "files": [
-    "dist/",
-    "src/"
-  ],
-  "bugs": "https://github.com/AOEpeople/cookie-notice/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AOEpeople/cookie-notice"
-  }
 }

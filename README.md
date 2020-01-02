@@ -86,6 +86,9 @@ For the most of you including the script should be enough but **CookieNoticeJS**
        // The message will be shown again in X days
        'expiresIn': 30,
 
+      // Specify a custom font family
+      'fontFamily': 'inherit',
+
        // Dismiss button background color
        'buttonBgColor': '#d35400',  
 

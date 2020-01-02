@@ -44,6 +44,9 @@
         },
 
         expiresIn: 30,
+
+        fontFamily: 'inherit',
+
         buttonBgColor: '#ca5000',
         buttonTextColor: '#fff',
         noticeBgColor: '#000',
@@ -106,7 +109,7 @@
         var noticeText = getStringForCurrentLocale(params.messageLocales);
 
         // Create notice
-        var notice = createNotice(noticeText, params.noticeBgColor, params.noticeTextColor, params.cookieNoticePosition);
+        var notice = createNotice(noticeText, params.noticeBgColor, params.noticeTextColor, params.fontFamily);
 
         var learnMoreLink;
 
@@ -120,7 +123,7 @@
         var buttonText = getStringForCurrentLocale(params.buttonLocales);
 
         // Create dismiss button
-        var dismissButton = createDismissButton(buttonText, params.buttonBgColor, params.buttonTextColor);
+        var dismissButton = createDismissButton(buttonText, params.buttonBgColor, params.buttonTextColor, params.fontFamily);
 
         // Dismiss button click event
         dismissButton.addEventListener('click', function (e) {
@@ -165,10 +168,10 @@
      * @param bgColor
      * @param textColor
      * @param position
+     * @param fontFamily
      * @returns {HTMLElement}
      */
-    function createNotice(message, bgColor, textColor, position) {
-
+    function createNotice(message, bgColor, textColor, fontFamily, position) {
         var notice = document.createElement('div'),
             noticeStyle = notice.style,
             lineHeight = 28,
@@ -205,8 +208,12 @@
         noticeStyle["text-align"] = 'center';
         noticeStyle["font-size"] = fontSize + 'px';
         noticeStyle["line-height"] = lineHeight + 'px';
-        noticeStyle.fontFamily = 'Helvetica neue, Helvetica, sans-serif';
 
+        if (!!fontFamily) {
+            noticeStyle['fontFamily'] = fontFamily;
+        }
+
+        console.log(notice);
 
         return notice;
     }
@@ -218,7 +225,7 @@
      * @param buttonTextColor
      * @returns {HTMLElement}
      */
-    function createDismissButton(message, buttonColor, buttonTextColor) {
+    function createDismissButton(message, buttonColor, buttonTextColor, buttonTextFontFamily) {
 
         var dismissButton = document.createElement('span'),
             dismissButtonStyle = dismissButton.style;
@@ -241,6 +248,11 @@
         dismissButtonStyle.display = 'inline-block';
         dismissButtonStyle.padding = '0 15px';
         dismissButtonStyle.margin = '0 0 0 10px';
+
+        if (!!buttonTextFontFamily) {
+            dismissButtonStyle.fontFamily = buttonTextFontFamily;
+
+        }
 
         return dismissButton;
 
