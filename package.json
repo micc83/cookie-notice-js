@@ -1,6 +1,6 @@
 {
     "name": "cookie-notice",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Show a widely configurable notice for European cookie law",
     "main": "gruntfile.js",
     "browser": "dist/cookie.notice.js",
@@ -11,9 +11,11 @@
     "keywords": [
         "GDPR",
         "DSGVO‎",
+        "customize",
         "cookie",
         "notice",
-        "vanilla"
+        "vanilla",
+        "js"
     ],
     "author": "Alessandro Benoit, Bernhard Behrendt",
     "contributors": [

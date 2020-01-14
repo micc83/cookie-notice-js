@@ -213,8 +213,6 @@
             noticeStyle['fontFamily'] = fontFamily;
         }
 
-        console.log(notice);
-
         return notice;
     }
 
