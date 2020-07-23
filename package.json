@@ -1,6 +1,6 @@
 {
     "name": "cookie-notice",
-    "version": "1.2.4",
+    "version": "1.3.0",
     "description": "Show a widely configurable notice for European cookie law",
     "main": "gruntfile.js",
     "browser": "dist/cookie.notice.js",
@@ -27,20 +27,23 @@
         },
         {
             "name": "Matthias Schröder"
+        },
+        {
+            "name": "Andrea Bergamasco"
         }
     ],
     "license": "MIT",
     "devDependencies": {
-        "grunt": "^1.0.4",
+        "grunt": "^1.2.1",
         "grunt-cli": "^1.3.2",
-        "grunt-contrib-connect": "^2.1.0",
-        "grunt-contrib-qunit": "^3.1.0",
-        "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-connect": "^3.0.0",
+        "grunt-contrib-qunit": "^4.0.0",
+        "grunt-contrib-uglify": "^5.0.0",
         "grunt-rsids-pa11y": "^0.3.4",
         "grunt-strip-code": "^1.0.6",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.1",
         "phantomjs-prebuilt": "^2.1.16",
-        "qunit": "^2.9.3",
+        "qunit": "^2.10.1",
         "live-server": "^1.2.1"
     },
     "engines": {
