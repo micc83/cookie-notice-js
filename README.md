@@ -13,7 +13,7 @@ And you will get a dismissable banner on the bottom of your pages showing a defa
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
     
-Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
+Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
 **CookieNoticeJS** has been succesfully tested on IE9+, Chrome, Firefox and Safari.
 
