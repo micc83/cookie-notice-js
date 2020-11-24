@@ -9,7 +9,12 @@
 **CookieNoticeJS** is a very simple and small *(→ 2 kB gzip)* vanilla JS script with multi language support for [GDPR][]/[DSGVO][]‎ transparency and
 notification purposes that provides an easy way to show a cookie notice on your website.
 
-<img src="https://i.imgur.com/koDf1h0.png" alt="cookie notice working example" align="center"/>
+
+**Cookie notice at the bottom of the page**
+<img src="https://i.imgur.com/xodbOdi.png" alt="cookie notice working example" align="center"/>
+
+**Cookie notice at the top of the page**
+<img src="https://i.imgur.com/XOfijh6.png" alt="cookie notice working example" align="center"/>
 
 **Available via [npm][]**
 
@@ -46,7 +51,18 @@ You will get a dismissable banner on the bottom of your pages showing a default 
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
 
-Check my website for a [DEMO](http://codeb.it/). Depending on the visitor browser language one of the preloaded translations will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
+Check out my blog for a [DEMO](http://heresone.mx). Depending on the visitor browser language one of the preloaded translations will be shown. At the moment **CookieNoticeJS** supports following languages out of the box:
+ 
+ - IT (Italiano)
+ - EN (English)
+ - FR (Français)
+ - PT (Português)
+ - ES (Español)
+ - NL (Nederlands)
+ - DE (Deutsch)
+ - PL (Polski)
+  
+  If you want to contribute with an extra language or find translation issues do not hesitate to open an issue or a PR.
 
 **CookieNoticeJS** has been successfully tested on IE9+, Chrome, Firefox and Safari.
 
@@ -88,7 +104,7 @@ For the most of you including the script should be enough but **CookieNoticeJS**
 
       // Specify a custom font family and size in pixels
       'fontFamily': 'inherit',
-      'fontSize': 12,
+      'fontSize': '12px',
 
        // Dismiss button background color
        'buttonBgColor': '#d35400',  

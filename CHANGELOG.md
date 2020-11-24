@@ -5,6 +5,10 @@
 
 Version History
 
+## Version 1.3.4
+ * _Date: 24 November 2020_
+ * Changed default font size handling 
+
 ## Version 1.1.19
  * _Date: 09 July 2020_
  * Added fontSize customization, with fallback to 12px if unset

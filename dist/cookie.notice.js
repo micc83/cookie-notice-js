@@ -20,9 +20,12 @@
         messageLocales: {
             it: 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
             en: 'We use cookies to ensure that you have the best experience on our website. If you continue to use this site we assume that you accept this.',
-            de: 'Wir verwenden Cookies um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben.',
             fr: 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.',
-            pt: 'Utilizamos cookies para garantir que você tenha a melhor experiência em nosso site. Se você continuar a usar este site, assumimos que você aceita isso.'
+            pt: 'Utilizamos cookies para garantir que você tenha a melhor experiência em nosso site. Se você continuar a usar este site, assumimos que você aceita isso.',
+            es: 'Utilizamos cookies para asegurarnos de que usted tenga la mejor experiencia en nuestro sitio web. Si continúa usando este sitio, asumimos que lo acepta.',
+            nl: 'We gebruiken cookies om ervoor te zorgen dat u de beste ervaring heeft op onze website. Als u deze site blijft gebruiken, gaan we ervan uit dat u dit accepteert.',
+            pl: 'Używamy plików cookie w celu zapewnienia najlepszych doświadczeń na naszej stronie internetowej. Jeśli będziesz nadal korzystać z tej strony, zakładamy, że to akceptujesz.',
+            de: 'Wir verwenden Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf unserer Website machen können. Wenn Sie diese Website weiterhin nutzen, gehen wir davon aus, dass Sie dies akzeptieren.'
         },
 
         cookieNoticePosition: 'bottom',
@@ -34,9 +37,12 @@
         learnMoreLinkText: {
             it: 'Saperne di più',
             en: 'Learn more',
-            de: 'Mehr erfahren',
             fr: 'En savoir plus',
-            pt: 'Saber mais'
+            pt: 'Saber mais',
+            es: 'Aprende más.',
+            nl: 'Meer informatie',
+            pl: 'Dowiedz się więcej',
+            de: 'Mehr erfahren'
         },
 
         buttonLocales: {
@@ -46,7 +52,7 @@
         expiresIn: 30,
 
         fontFamily: 'inherit',
-        fontSize: 12,
+        fontSize: '12px',
 
         buttonBgColor: '#ca5000',
         buttonTextColor: '#fff',
@@ -175,10 +181,10 @@
     function createNotice(message, bgColor, textColor, fontFamily, fontSize, position) {
         var notice = document.createElement('div'),
             noticeStyle = notice.style,
-            lineHeight = 28,
+            lineHeight = '28px',
             paddingBottomTop = 10,
-            noticeHeight = lineHeight + paddingBottomTop * 2;
-        fontSize = typeof fontSize !== 'undefined' ? fontSize : 12;
+            noticeHeight = parseInt(lineHeight, 10) + paddingBottomTop * 2;
+        fontSize = typeof fontSize !== 'undefined' ? fontSize : '12px';
 
         notice.innerHTML = message + '&nbsp;';
         notice.setAttribute('id', 'cookieNotice');
@@ -207,8 +213,8 @@
         noticeStyle["z-index"] = '999';
         noticeStyle.padding = paddingBottomTop + 'px 5px';
         noticeStyle["text-align"] = 'center';
-        noticeStyle["font-size"] = fontSize + 'px';
-        noticeStyle["line-height"] = lineHeight + 'px';
+        noticeStyle["font-size"] = fontSize;
+        noticeStyle["line-height"] = lineHeight;
 
         if (!!fontFamily) {
             noticeStyle['fontFamily'] = fontFamily;
