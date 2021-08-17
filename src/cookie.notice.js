@@ -41,7 +41,7 @@
 
         'buttonLocales': {
             'en': 'Ok'
-            'en': 'D\'acòrdi'            
+            'oc': 'D\'acòrdi'            
         },
 
         'expiresIn': 30,
