@@ -46,21 +46,27 @@ npm test
 <script src="cookie-notice/dist/cookie.notice.min.js"></script>
 ```
 
+
+
 ## Behavior
 You will get a dismissable banner on the bottom of your pages showing a default cookie audit like the following:
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
 
-Check out my blog for a [DEMO](http://heresone.mx). Depending on the visitor browser language one of the preloaded translations will be shown. At the moment **CookieNoticeJS** supports following languages out of the box:
+Check out my blog for a [DEMO](http://heresone.mx). 
+
+Depending on the visitor browser language one of the preloaded translations will be shown. At the moment **CookieNoticeJS** supports following languages out of the box:
  
  - IT (Italiano)
- - EN (English)
+ - EN (English) `default`
  - FR (Français)
  - PT (Português)
  - ES (Español)
  - NL (Nederlands)
  - DE (Deutsch)
  - PL (Polski)
+ 
+ > You can also add any other language code
   
   If you want to contribute with an extra language or find translation issues do not hesitate to open an issue or a PR.
 

@@ -1,7 +1,7 @@
 {
     "name": "cookie-notice",
-    "version": "1.3.6",
-    "description": "A very simple configurable and small (2kB gziped) vanilla JS lib with out of the box multi language support [it, en, fr, pt, es, nl, de, pl] for GDPR/DSGVO and notification purposes",
+    "version": "1.3.8",
+    "description": "A very simple configurable and small (4.5kb / 2kB gzipped) vanilla JS lib with out of the box multi language support [it, en, fr, pt, es, nl, de, pl] for GDPR/DSGVO and notification purposes",
     "main": "gruntfile.js",
     "browser": "dist/cookie.notice.js",
     "scripts": {
@@ -35,16 +35,16 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "grunt": "^1.3.0",
-        "grunt-cli": "^1.3.2",
+        "grunt": "^1.4.1",
+        "grunt-cli": "^1.4.3",
         "grunt-contrib-connect": "^3.0.0",
-        "grunt-contrib-qunit": "^4.0.0",
-        "grunt-contrib-uglify": "^5.0.0",
+        "grunt-contrib-qunit": "^5.1.1",
+        "grunt-contrib-uglify": "^5.0.1",
         "grunt-rsids-pa11y": "^0.3.4",
-        "grunt-strip-code": "^1.0.6",
-        "jquery": "^3.5.1",
+        "grunt-strip-code": "^1.0.9",
+        "jquery": "^3.6.0",
         "phantomjs-prebuilt": "^2.1.16",
-        "qunit": "^2.12.0",
+        "qunit": "^2.17.2",
         "live-server": "^1.2.1"
     },
     "engines": {
