@@ -1,6 +1,6 @@
 {
     "name": "cookie-notice",
-    "version": "1.3.8",
+    "version": "1.3.9",
     "description": "A very simple configurable and small (4.5kb / 2kB gzipped) vanilla JS lib with out of the box multi language support [it, en, fr, pt, es, nl, de, pl] for GDPR/DSGVO and notification purposes",
     "main": "gruntfile.js",
     "browser": "dist/cookie.notice.js",
@@ -10,9 +10,14 @@
     },
     "keywords": [
         "GDPR",
-        "DSGVO‎",
+        "DSGVO",
         "customize",
         "cookie",
+        "banner",
+        "cookiebanner",
+        "cookie-banner",
+        "cookienotice",
+        "cookie-notice",
         "notice",
         "vanilla",
         "js",
