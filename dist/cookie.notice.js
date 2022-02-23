@@ -21,8 +21,9 @@
             'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito. Se continui ad utilizzare questo sito assumiamo che tu ne sia felice.',
             'en': 'We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.',
             'de': 'Wir verwenden Cookies um sicherzustellen dass Sie das beste Erlebnis auf unserer Website haben.',
-            'oc': 'Utilizam de cookies per vos provesir la melhora experiéncia possibla sus nòstre site web. Se contunhatz d\'utilizar aqueste site web considerarem que sètz d\'acòrdi amb aquò.',          
-            'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.'
+            'oc': 'Utilizam de cookies per vos provesir la melhora experiéncia possibla sus nòstre site web. Se contunhatz d\'utilizar aqueste site web considerarem que sètz d\'acòrdi amb aquò.',
+            'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site. Si vous continuez à utiliser ce site, nous supposons que vous acceptez.',
+            'hu': 'Sütiket használunk a honlapunkkon a legjobb felhasználói élmény érdekében. Ha tovább használja a weblapot, akkor úgy vesszük, hogy egyetért.'
         },
 
         'cookieNoticePosition': 'bottom',
@@ -36,12 +37,14 @@
             'en': 'Learn more',
             'de': 'Mehr erfahren',
             'oc': 'Ne saber mai',
-            'fr': 'En savoir plus'
+            'fr': 'En savoir plus',
+            'hu': 'Tudjon meg többet',
         },
 
         'buttonLocales': {
             'en': 'Ok',
-            'oc': 'D\'acòrdi'            
+            'oc': 'D\'acòrdi',
+            'hu': 'Oké'
         },
 
         'expiresIn': 30,
@@ -64,7 +67,6 @@
 
     /**
      * Constructor
-     * @constructor
      */
     window.cookieNoticeJS = function () {
 

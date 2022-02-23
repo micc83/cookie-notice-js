@@ -1,4 +1,5 @@
-**Notice:** CookieNoticeJS is not under active development for the time being (and not GDPR compliant for what I know). Check  [AOEPeople fork](https://github.com/AOEpeople/cookie-notice) instead.
+**Notice:** CookieNoticeJS is not under active development for the time being (and not GDPR compliant for what I know). 
+Check  [AOEPeople fork](https://github.com/AOEpeople/cookie-notice) instead.
 
 # CookieNoticeJS
 
@@ -12,10 +13,12 @@ Simply add the following tag to your website footer:
 And you will get a dismissable banner on the bottom of your pages showing a default cookie audit like the following:
 
 > We use cookies to make sure you can have the best experience on our website. If you continue to use this site we assume that you will be happy with it.
-    
-Depending on the visitor browser language one of the preloaded translation will be shown. At the moment **CookieNoticeJS** supports *EN, IT, DE and FR*. If you want to contribute with an extra language do not hesitate to open an issue or a PR.
 
-**CookieNoticeJS** has been succesfully tested on IE9+, Chrome, Firefox and Safari.
+Depending on the visitor browser language one of the preloaded translation will be shown. 
+At the moment **CookieNoticeJS** supports *EN, IT, DE, FR, OC and HU*. 
+If you want to contribute with an extra language do not hesitate to open an issue or a PR.
+
+**CookieNoticeJS** has been successfully tested on IE9+, Chrome, Firefox and Safari.
 
 ## Customize CookieNoticeJS
 
@@ -73,4 +76,6 @@ For the most of you including the script should be enough but **CookieNoticeJS**
 ```
 
 #### Contributors
-[Bernhard Behrendt](mailto:bernhard.behrendt@aoe.com) [@AOEpeople](https://github.com/AOEpeople)
+* [Bernhard Behrendt](mailto:bernhard.behrendt@aoe.com) 
+* [@AOEpeople](https://github.com/AOEpeople) 
+* [@sqpp](https://github.com/sqpp)
